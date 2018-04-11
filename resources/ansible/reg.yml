@@ -1,0 +1,11 @@
+---
+- hosts: scoldham2.mylabserver.com
+  tasks:
+    - name: copy a file
+      copy:
+        src: testfile
+        dest: /home/user/testregister
+        mode: 400
+      register: var
+    - name: output debug info
+      debug: msg="debug info is {{ var }}"

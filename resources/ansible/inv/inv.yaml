@@ -1,0 +1,16 @@
+---
+all:
+  hosts:
+    scoldham2:
+        ansible_host: 54.165.114.173
+        special_var: text_value
+        x: 5
+  children:
+    httpd:
+      hosts:
+        scoldham3.mylabserver.com
+        scoldham4.mylabserver.com
+    labservers:
+      hosts:
+        scoldham[2:6].mylabserver.com
+...

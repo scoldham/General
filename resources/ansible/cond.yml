@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+    - name: copy files
+      copy:
+        src: "{{item}}"
+        dest: "/home/user/{{item}}"
+        mode: 400
+      with_items: 
+        - file1
+        - file2
+        - file3

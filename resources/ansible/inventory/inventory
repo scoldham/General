@@ -1,0 +1,5 @@
+scoldham2 ansible_host=scoldham2.mylabserver.com
+
+[labservers]
+scoldham2.mylabserver.com
+scoldham3.mylabserver.com

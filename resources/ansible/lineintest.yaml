@@ -1,0 +1,9 @@
+---
+- hosts: scoldham2.mylabserver.com
+  gather_facts: no
+  tasks:
+    - name: Create file with linein
+      lineinfile:
+        path: /home/user/hostname.conf
+        regexp: ^Hostname=.*
+        line: CHANGED
